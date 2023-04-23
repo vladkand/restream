@@ -32,7 +32,7 @@ ul {
 
 img {
    display: block;
-   max-width: 100%;
+   width: 100%;
 }
 
 .link {
@@ -170,7 +170,10 @@ img {
 
 .cat-list li {
    overflow: hidden;
+   flex-grow: 1;
    border-radius: 16px;
+
+   outline: 1px solid red;
 }
 
 .cat-list li:hover {
@@ -189,4 +192,22 @@ img {
    line-height: 1.5;
    letter-spacing: 0.5px;
    color: #2c2c2c;
+}
+
+/* ! DUBLE-KATS */
+.duble-kats-list {
+   display: flex;
+   gap: 40px;
+}
+.duble-kats-item {
+   overflow: hidden;
+   border-radius: 16px;
+
+   outline: 1px solid red;
+}
+
+/* FOOTER */
+.page-footer {
+   height: 200px;
+   background-color: var(--footer-bg-color);
 }

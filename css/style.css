@@ -33,6 +33,7 @@ ul {
 img {
    display: block;
    width: 100%;
+   /* max-width: 100%; */
 }
 
 .link {
@@ -92,11 +93,11 @@ img {
    padding-bottom: 52px;
    padding-left: 28px;
    height: 480px;
-   margin-bottom: 60px;
+   /* margin-bottom: 60px; */
 
    background-color: var(--accent-color);
    border-radius: 16px;
-   background-image: url(../img/bgimg.jpg);
+   background-image: url(../img/bgimage.jpg);
    background-position: center;
    background-repeat: no-repeat;
    background-size: cover;
@@ -128,26 +129,13 @@ img {
 }
 /* -------- */
 
-/* KETS */
-/* .section-title {
-   margin-bottom: 40px;
-}
-.kats-list {
-   display: flex;
-   justify-content: space-between;
-   gap: 40px;
-}
-.kats-list .item {
-   overflow: hidden;
-   border-radius: 16px;
-} */
-
-/* 02--KETS */
+/* --- CATS --- */
 .section {
-   margin-top: 60px;
+   padding-top: 60px;
 }
 
 .section-title {
+   margin-bottom: 40px;
    font-weight: 700;
    font-size: 24px;
    line-height: 40px;
@@ -162,49 +150,55 @@ img {
    color: #2c2c2c;
 }
 
-.cat-list {
+/* --- CATS --- */
+
+.cats-list {
    display: flex;
    gap: 40px;
-   margin-top: 40px;
 }
-
-.cat-list li {
+.cats-item {
+   /* display: flex;
+   flex-direction: column; */
    overflow: hidden;
-   flex-grow: 1;
    border-radius: 16px;
+   flex-basis: calc((100% - 2 * 40) / 3);
 
-   outline: 1px solid red;
+   /* outline: 1px solid red; */
 }
 
-.cat-list li:hover {
+.cats-item > img {
+   flex-grow: 1;
+}
+.cats-descr {
+   padding: 16px 8px 16px 8px;
+}
+
+.cats-item:hover {
    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.25);
 }
+/* ------- */
 
-.cat-list .content {
-   padding: 16px 8px 24px 8px;
-}
-
-.cat-list h3 {
+/* --- GALLERY --- */
+.gallery .section-title {
    margin-bottom: 8px;
 }
 
-.cat-list p {
-   line-height: 1.5;
-   letter-spacing: 0.5px;
-   color: #2c2c2c;
-}
-
-/* ! DUBLE-KATS */
-.duble-kats-list {
+.gallery-list {
    display: flex;
-   gap: 40px;
+   flex-wrap: wrap;
+   gap: 16px;
 }
-.duble-kats-item {
-   overflow: hidden;
-   border-radius: 16px;
 
-   outline: 1px solid red;
+
+.gallery-item {
+   flex-basis: calc((100% - 5 * 16) / 6);
 }
+
+.gallery-item > img {
+   display: block;
+   max-width: 100%;
+}
+
 
 /* FOOTER */
 .page-footer {
